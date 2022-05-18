@@ -13,12 +13,12 @@ export const storage = multer.diskStorage({
 
 export const upload = multer({
     storage: storage,
-    fileFilter: (req, file, cb) => {
-        if (file.mimetype == "image/bmp" || file.mimetype == "image/jpg" || file.mimetype == "image/png" || file.mimetype == "image/pbm") {
-            cb(null, true);
-        } else {
-            cb(null, false);
-            return cb(new Error('Solo se permiten los siguientes formatos: bmp, jpg, png, pbm'));
-        }
-    }
+    // fileFilter: (req, file, cb) => {
+    //     if (file.mimetype == "image/bmp" || file.mimetype == "image/jpg" || file.mimetype == "image/png" || file.mimetype == "image/pbm") {
+    //         cb(null, true);
+    //     } else {
+    //         cb(null, false);
+    //         return cb(new Error('Solo se permiten los siguientes formatos: bmp, jpg, png, pbm'));
+    //     }
+    // }
 });

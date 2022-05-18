@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Galaoox/auth-backend-node-express#readme",
   "dependencies": {
+    "@google-cloud/vision": "^2.4.2",
     "cors": "^2.8.5",
     "dotenv": "^14.3.0",
     "express": "^4.17.1",
