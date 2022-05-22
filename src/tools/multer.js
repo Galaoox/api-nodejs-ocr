@@ -1,9 +1,13 @@
 import multer from "multer";
 import path from 'path';
+import fs from 'fs'
+
 
 export const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../public'));
+        const pathFolder = path.join(__dirname, '../public');
+        fs.mkdirSync(pathFolder, { recursive: true })
+        cb(null, pathFolder);
     },
     filename: (req, file, cb) => {
         const fileName = file.originalname.toLowerCase().split(' ').join('-');
