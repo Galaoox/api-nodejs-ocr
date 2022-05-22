@@ -3,7 +3,7 @@ import path from 'path';
 
 export const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public'));
+        cb(null, path.join(__dirname, '../public'));
     },
     filename: (req, file, cb) => {
         const fileName = file.originalname.toLowerCase().split(' ').join('-');

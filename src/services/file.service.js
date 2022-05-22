@@ -20,12 +20,6 @@ const CONFIG = {
     }
 };
 
-async function quickstart() {
-
-
-}
-quickstart();
-
 
 export async function readTextFile(path) {
     // Creates a client
